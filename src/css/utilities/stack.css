@@ -10,4 +10,12 @@
     .stack-xs > * + * {
         margin-block-start: var(--stack-newsletter-list);
     }
+
+    .stack-sm > * + * {
+        margin-block-start: var(--stack-success-content);
+    }
+
+    .stack-xl > * + * {
+        margin-block-start: var(--stack-success-button);
+    }
 }

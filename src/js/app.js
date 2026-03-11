@@ -1,24 +1,38 @@
 import { validateEmail } from "./modules/validation";
-import { showError, clearError, showSuccess, ShowForm } from "./modules/ui";
+import { showError, clearError, showSuccess, ShowForm, animateContainer } from "./modules/ui";
 
-export function initApp(){
+export function initApp() {
+  const form = document.getElementById("signup-form");
+  const input = document.getElementById("user-email");
+  const errorMessage = document.querySelector(".error-message");
+  const dismissBtn = document.querySelector(".dismiss-btn");
 
-    const form = document.getElementById("signup-form");
-    const input = document.getElementById("user-email");
-    const errorMessage = document.querySelector(".error-message");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-    form.addEventListener("submit", (event) => {
+    const userEmail = input.value.trim();
 
-        event.preventDefault();
+    if (!validateEmail(userEmail)) {
+      showError(input, errorMessage);
+      return;
+    }
 
-        const userEmail = input.value.trim();
+    clearError(input, errorMessage);
+    showSuccess(userEmail);
+  });
 
-        if(!validateEmail(userEmail)) {
-            showError(input, errorMessage);
-            return;
-        }
+  /* limpiar error mientras el usuario escribe */
 
-        clearError(input, errorMessage);
-        showSuccess(userEmail);
-    })
+  input.addEventListener("input", () => {
+    clearError(input, errorMessage);
+  });
+
+  dismissBtn.addEventListener("click", () => {
+
+    input.value = "";
+    ShowForm();
+
+    animateContainer();
+
+  });
 }

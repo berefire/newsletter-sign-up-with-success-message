@@ -9,6 +9,7 @@
         color: var(--white);
         font-weight: var(--fw-title);
         line-height: var(--lh-title);
+        text-align: center;
     }
 
     .button:hover {

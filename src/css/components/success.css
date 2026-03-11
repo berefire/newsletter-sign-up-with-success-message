@@ -1,5 +1,21 @@
 @layer components {
-    .hidden {
-        display: none;
+    .success-message {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-newsletter);
+    }
+
+    .success-title {
+        font-size: var(--fs-text-title);
+        line-height: var(--lh-title);
+        max-inline-size: 12ch;
+    }
+
+    .success-description {
+        max-inline-size: 40ch;
+    }
+
+    .success-email {
+        font-weight: var(--fw-title);
     }
 }

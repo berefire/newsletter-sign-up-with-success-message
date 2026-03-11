@@ -3,6 +3,8 @@
     --padding-inline-newsletter-content: var(--spacing-300);
     --padding-inline-newsletter: 0;
     --padding-block-newsletter: 0;
+    --padding-inline-success: var(--spacing-300);
+    --padding-success: var(--spacing-800);
     --list-padding-inline-start: var(--spacing-200);
     --email-padding-block-end: var(--spacing-100);
 
@@ -10,11 +12,13 @@
     --stack-newsletter-content: var(--spacing-300);
     --stack-newsletter-information: var(--spacing-500);
     --stack-newsletter-list: var(--spacing-100);
+    --stack-success-content: var(--spacing-400);
+    --stack-success-button: calc(263 / var(--base) * 1rem);
 
     --space-block-input: var(--spacing-200);
     --space-inline-input: var(--spacing-300);
     --space-block-button: var(--spacing-200);
-    --space-inline-button: var(--spacing-600);
+    --space-inline-button: var(--spacing-500);
 
     --border-radius-button: var(--spacing-100);
   }
@@ -24,6 +28,8 @@
       --padding-inline-newsletter-content: 0;
       --padding-inline-newsletter: var(--spacing-500);
       --padding-block-newsletter: var(--spacing-500);
+      --stack-success-button: var(--spacing-400);
+      --stack-newsletter-information:var(--spacing-300);
     }
   }
 
@@ -32,6 +38,8 @@
       --padding-inline-newsletter: var(--spacing-400);
       --padding-block-newsletter: var(--spacing-400);
       --gap-newsletter: var(--spacing-800);
+      --stack-newsletter-content: var(--spacing-400);
+      --stack-newsletter-information:var(--spacing-400);
     }
   }
 }

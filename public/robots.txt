@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://berefire.github.io/newsletter-signup-form-frontendmentor/sitemap.xml

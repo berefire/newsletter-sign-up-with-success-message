@@ -21,7 +21,6 @@
     padding-block: var(--space-block-input);
     padding-inline: var(--space-inline-input);
     border-radius: var(--border-radius-button);
-    border: 0.0625em solid var(--bg-email-input-border);
   }
 
   .error-message {
@@ -33,9 +32,42 @@
     margin-block-end: var(--email-padding-block-end);
   }
 
+  .input-email {
+    border: 0.0625em solid var(--bg-email-input-border);
+  }
+
   .invalid-input {
-    border: 0.0625em solid red;
-    background-color: #FFE7E6;
+    border: 0.0625em solid var(--bg-error-border);
+    background-color: #ffe7e6;
     color: var(--fc-error-text);
+  }
+
+  /* -------------------------------- */
+  /* form animations */
+  /* -------------------------------- */
+
+  @keyframes input-shake {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-6px);
+    }
+    40% {
+      transform: translateX(6px);
+    }
+    60% {
+      transform: translateX(-4px);
+    }
+    80% {
+      transform: translateX(4px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .input-shake {
+    animation: input-shake 0.35s ease;
   }
 }

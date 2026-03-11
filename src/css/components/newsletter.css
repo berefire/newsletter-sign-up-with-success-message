@@ -3,9 +3,15 @@
     background-color: var(--bg-newsletter);
   }
 
-  .newsletter-image picture {
-    block-size: 100%;
-    inline-size: auto;
+  .newsletter-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .newsletter-image picture, .newsletter-image img {
+    block-size: auto;
+    inline-size: 100%;
   }
 
   .newsletter-title {
