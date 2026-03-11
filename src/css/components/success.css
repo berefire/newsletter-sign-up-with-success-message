@@ -20,7 +20,7 @@
 
     @media(min-width: 48em){
         .success-message {
-            max-inline-size: 504px;
+            max-inline-size: calc( 504 / var(--base) * 1rem);;
             min-block-size: auto;
         }
     }

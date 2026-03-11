@@ -42,14 +42,14 @@
 
   @media (min-width: 48em){
     .newsletter {
-      max-inline-size: 608px;
+      max-inline-size: calc( 608 / var(--base) * 1rem);
       min-block-size: auto;
     }
   }
 
   @media (min-width: 64em){
     .newsletter {
-      max-inline-size: 904px;
+      max-inline-size: calc( 904 / var(--base) * 1rem);
       min-block-size: auto;
     }
   }
