@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <!-- Author -->
+  <meta name="author" content="Berefire" />
+
+  <!-- Description -->
+  <meta name="description"
+    content="Frontend Mentor challenge solution for the Newsletter sign-up form with success message. Built with semantic HTML, modular CSS architecture, and vanilla JavaScript." />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/newsletter-sign-up-with-success-message/assets/images/favicon-32x32.png">
+
+  <link rel="manifest" href="/newsletter-sign-up-with-success-message/manifest.json">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <script type="module" crossorigin src="/newsletter-sign-up-with-success-message/assets/index-DuYJppPq.js"></script>
+  <link rel="stylesheet" crossorigin href="/newsletter-sign-up-with-success-message/assets/index-DlIJwLMN.css">
+</head>
+
+<body>
+  <main class="cover">
+    <!-- Sign-up form start -->
+    <section class="newsletter cluster box-lg">
+      <picture class="newsletter-image">
+
+        <source media="(min-width: 64em)" srcset="/newsletter-sign-up-with-success-message/assets/images/illustration-sign-up-desktop.svg">
+
+        <source media="(min-width: 48em)" srcset="/newsletter-sign-up-with-success-message/assets/images/illustration-sign-up-tablet.svg">
+
+        <img src="/newsletter-sign-up-with-success-message/assets/images/illustration-sign-up-mobile.svg" alt="Newsletter illustration">
+      </picture>
+      <div class="newsletter-content box stack-lg">
+        <div class="newsletter-information stack">
+          <h1 class="newsletter-title">Stay updated!</h1>
+          <p class="newsletter-description">Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="feature-list stack-xs">
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+        </div>
+
+
+        <form id="signup-form" class="stack" novalidate>
+          <div class="form-field">
+            <div class="information-fields">
+              <label for="email" class="email-form">Email address</label>
+              <span class="error-message"></span>
+            </div>
+            <input class="input-email" id="user-email" type="email" placeholder="email@company.com">
+          </div>
+
+
+          <button class="button" type="submit">Subscribe to monthly newsletter</button>
+        </form>
+
+      </div>
+    </section>
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+    <section class="success-message box-sm stack-xl hidden">
+      <div class="success-content stack-sm">
+        <div class="success-image">
+          <img src="/newsletter-sign-up-with-success-message/assets/images/icon-success.svg" alt="">
+        </div>
+        <h2 class="success-title">
+          Thanks for subscribing!
+        </h2>
+        <p class="success-description">
+          A confirmation email has been sent to <span class="success-email"></span>.
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+      </div>
+
+
+      <button class="button dismiss-btn">
+        Dismiss message</button>
+
+    </section>
+    <!-- Success message end -->
+  </main>
+
+
+
+  <div class="attribution">
+    Challenge by <a class="link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a class="link" href="#">Berefire</a>.
+  </div>
+
+
+</body>
+
+</html>
