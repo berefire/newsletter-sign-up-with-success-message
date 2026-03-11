@@ -1,0 +1,22 @@
+@layer tokens {
+    :root {
+        /* font-families */
+        --font-roboto: "Roboto", sans-serif;
+
+        /* font size scale */
+        --base-font: 16;
+
+        --font-size-90: calc(12 / var(--base-font) * 1rem); /* 12px */
+        --font-size-100: calc(16 / var(--base-font) * 1rem); /* 16px */
+        --font-size-500: calc(40 / var(--base-font) * 1rem); /* 40px */
+        --font-size-900: calc(56 / var(--base-font) * 1rem); /* 56px */
+
+        /* weights */
+        --font-weight-regular: 400;
+        --font-weight-bold: 700;
+
+        /* line heights */
+        --line-height-tight: 1;
+        --line-height-regular: 1.5;
+    }
+}

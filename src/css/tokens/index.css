@@ -1,0 +1,9 @@
+@layer tokens;
+
+@import "@tokens/primitives/colors.css";
+@import "@tokens/primitives/spacing.css";
+@import "@tokens/primitives/typography.css";
+
+@import "@tokens/semantic/colors.css";
+@import "@tokens/semantic/spacing.css";
+@import "@tokens/semantic/typography.css";

@@ -1,0 +1,33 @@
+@layer base {
+    html {
+        background-color: var(--bg-primary);
+        font-family: var(--font-family-base);
+        color: var(--fc-text);
+        -webkit-text-size-adjust: 100%;
+    }
+
+    html,
+    body {
+        min-block-size: 100vh;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul {
+        list-style-position: inside;
+    }
+
+    input, button {
+        display: block;
+    }
+
+    @supports (min-block-size: 100dvh){
+        html,
+        body {
+            min-block-size: 100dvh;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@layer components {
+    .button {
+        inline-size: 100%;
+        padding-block: var(--space-block-button);
+        padding-inline: var(--space-inline-button);
+        border: none;
+        border-radius: var(--border-radius-button);
+        background: var(--bg-button);
+        color: var(--white);
+        font-weight: var(--fw-title);
+        line-height: var(--lh-title);
+    }
+
+    .button:hover {
+        background: var(--bg-button-hover);
+    }
+}

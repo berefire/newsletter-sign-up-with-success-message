@@ -1,0 +1,55 @@
+@layer components {
+  .newsletter {
+    background-color: var(--bg-newsletter);
+  }
+
+  .newsletter-image picture {
+    block-size: 100%;
+    inline-size: auto;
+  }
+
+  .newsletter-title {
+    font-size: var(--fs-text-title);
+    font-weight: var(--fw-title);
+    line-height: var(--lh-title);
+    white-space: nowrap;
+  }
+
+  .newsletter-information {
+    font-size: var(--fs-text-body);
+    font-weight: var(--fw-body);
+    line-height: var(--lh-body);
+    max-inline-size: 35ch;
+  }
+
+  .feature-list li {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+  }
+
+  .feature-list li::before {
+    content: "";
+    inline-size: calc( 21 / var(--base) * 1rem);
+    block-size: calc( 21 / var(--base) * 1rem);
+
+    flex-shrink: 0;
+
+    background: url("/assets/images/icon-list.svg") no-repeat center;
+    background-size: contain;
+  }
+
+ 
+
+  @media (min-width: 48em){
+    .newsletter-information {
+      max-inline-size: 50ch;
+    }
+  }
+
+  @media (min-width: 64em){
+    .newsletter-information {
+      max-inline-size: 40ch;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@layer utilities {
+    .cover {
+        flex: 1;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    @media (min-width: 48em){
+        .cover {
+            align-items: center;
+        }
+    }
+}

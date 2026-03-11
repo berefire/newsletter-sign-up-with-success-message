@@ -1,0 +1,21 @@
+@layer tokens {
+    :root {
+        --font-family-base: var(--font-roboto);
+
+        --fs-text-title: var(--font-size-500);
+        --fs-text-body: var(--font-size-100);
+        --fs-email-label: var(--font-size-90);
+
+        --fw-body: var(--font-weight-regular);
+        --fw-title: var(--font-weight-bold);
+
+        --lh-body: var(--line-height-regular);
+        --lh-title: var(--line-height-tight);
+    }
+
+    @media (min-width: 48em){
+        :root {
+            --fs-text-title: var(--font-size-900);
+        }
+    }
+}

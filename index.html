@@ -1,52 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <!-- Author -->
+  <meta name="author" content="Berefire" />
+
+  <!-- Description -->
+  <meta name="description"
+    content="Frontend Mentor challenge solution for the Newsletter sign-up form with success message. Built with semantic HTML, modular CSS architecture, and vanilla JavaScript." />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script defer type="module" src="/src/main.js"></script>
 </head>
+
 <body>
+  <main class="cover">
+    <!-- Sign-up form start -->
+    <section class="newsletter cluster box-lg">
+      <picture class="newsletter-image">
 
-  <!-- Sign-up form start -->
+        <source media="(min-width: 64em)" srcset="/assets/images/illustration-sign-up-desktop.svg">
 
-  Stay updated!
+        <source media="(min-width: 48em)" srcset="/assets/images/illustration-sign-up-tablet.svg">
 
-  Join 60,000+ product managers receiving monthly updates on:
+        <img src="/assets/images/illustration-sign-up-mobile.svg" alt="Newsletter illustration">
+      </picture>
+      <div class="newsletter-content box stack-lg">
+        <div class="newsletter-information stack">
+          <h1 class="newsletter-title">Stay updated!</h1>
+          <p class="newsletter-description">Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="feature-list stack-xs">
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+        </div>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
 
-  Email address
-  email@company.com
+        <form id="signup-form" class="stack" novalidate>
+          <div class="form-field">
+            <div class="information-fields">
+              <label for="email" class="email-form">Email address</label>
+              <span class="error-message"></span>
+            </div>
+            <input id="user-email" type="email" placeholder="email@company.com">
+          </div>
 
-  Subscribe to monthly newsletter
 
-  <!-- Sign-up form end -->
+          <button class="button" type="submit">Subscribe to monthly newsletter</button>
+        </form>
 
-  <!-- Success message start -->
+      </div>
+    </section>
+    <!-- Sign-up form end -->
 
-  Thanks for subscribing!
+    <!-- Success message start -->
+    <section class="success-message hidden">
+      <div class="success-image">
+        <img src="/assets/images/icon-success.svg" alt="">
+      </div>
+      <h2 class="success-title">
+        Thanks for subscribing!
+      </h2>
+      <p class="success-description">
+        A confirmation email has been sent to ash@loremcompany.com.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
 
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
+      <button class="button">
+        Dismiss message</button>
 
-  Dismiss message
+    </section>
+    <!-- Success message end -->
+  </main>
 
-  <!-- Success message end -->
-  
+
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a class="link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a class="link" href="#">Berefire</a>.
   </div>
+
+
 </body>
+
 </html>

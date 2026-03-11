@@ -1,0 +1,12 @@
+@layer tokens {
+    :root {
+        
+        /* Colors */
+        --white: hsl(0, 100%, 100%);
+        --grey: hsl(0, 0%, 58%);
+        --blue-800: hsl(234, 29%, 20%);
+        --blue-700: hsl(235, 18%, 26%);
+        --red: hsl(4, 100%, 67%);
+        --gradient-4: hsl(15, 100%, 61%);
+    }
+}

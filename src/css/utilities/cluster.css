@@ -1,0 +1,21 @@
+@layer utilities {
+    .cluster {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: var(--gap-newsletter);
+    }
+
+    @media (min-width: 48em ){
+        .cluster {
+            align-items: stretch;
+        }
+    }
+
+    @media (min-width: 64em){
+        .cluster {
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+    }
+}

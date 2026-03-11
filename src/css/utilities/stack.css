@@ -1,0 +1,13 @@
+@layer utilities {
+    .stack > * + * {
+        margin-block-start: var(--stack-newsletter-content);
+    }
+
+    .stack-lg > * + * {
+        margin-block-start: var(--stack-newsletter-information);
+    }
+
+    .stack-xs > * + * {
+        margin-block-start: var(--stack-newsletter-list);
+    }
+}

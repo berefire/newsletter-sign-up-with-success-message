@@ -1,0 +1,25 @@
+@layer utilities {
+    .box {
+        padding-inline: var(--padding-inline-newsletter-content);
+        padding-block: 0 calc(44 / var(--base) * 1rem);
+        border-radius: 0;
+    }
+
+    .box-lg {
+        padding-inline: var(--padding-inline-newsletter);
+        padding-block: var(--padding-block-newsletter);
+    }
+
+    @media (min-width: 48em){
+        .box {
+            padding-block: 0;
+        }
+
+        .box-lg {
+            padding-inline: var(--padding-inline-newsletter);
+            padding-block: var(--padding-block-newsletter);
+            border-radius: calc(36 / var(--base) * 1rem);
+        }
+    }
+}
+

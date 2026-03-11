@@ -1,0 +1,41 @@
+@layer components {
+  .email-form {
+    display: block;
+    font-size: var(--fs-email-label);
+    line-height: var(--lh-body);
+    font-weight: var(--fw-title);
+    margin-block-end: var(--email-padding-block-end);
+  }
+
+  .information-fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  #user-email {
+    inline-size: 100%;
+    padding-block: var(--space-block-input);
+    padding-inline: var(--space-inline-input);
+    border-radius: var(--border-radius-button);
+    border: 0.0625em solid var(--bg-email-input-border);
+  }
+
+  .error-message {
+    display: block;
+    color: var(--fc-error-text);
+    font-size: var(--fs-email-label);
+    line-height: var(--lh-body);
+    font-weight: var(--fw-title);
+    margin-block-end: var(--email-padding-block-end);
+  }
+
+  .invalid-input {
+    border: 0.0625em solid red;
+    background-color: #FFE7E6;
+    color: var(--fc-error-text);
+  }
+}
