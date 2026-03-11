@@ -3,6 +3,8 @@
         display: flex;
         flex-direction: column;
         background-color: var(--bg-newsletter);
+        max-inline-size: 100%;
+        min-block-size: 100vh;
     }
 
     .success-title {
@@ -11,11 +13,15 @@
         max-inline-size: 12ch;
     }
 
-    .success-description {
-        max-inline-size: 40ch;
-    }
-
     .success-email {
         font-weight: var(--fw-title);
+    }
+
+
+    @media(min-width: 48em){
+        .success-message {
+            max-inline-size: 504px;
+            min-block-size: auto;
+        }
     }
 }

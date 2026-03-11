@@ -1,12 +1,8 @@
 @layer components {
   .newsletter {
     background-color: var(--bg-newsletter);
-  }
-
-  .newsletter-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-inline-size: 100%;
+    min-block-size: 100vh;
   }
 
   .newsletter-image picture, .newsletter-image img {
@@ -25,7 +21,6 @@
     font-size: var(--fs-text-body);
     font-weight: var(--fw-body);
     line-height: var(--lh-body);
-    max-inline-size: 35ch;
   }
 
   .feature-list li {
@@ -45,17 +40,17 @@
     background-size: contain;
   }
 
- 
-
   @media (min-width: 48em){
-    .newsletter-information {
-      max-inline-size: 50ch;
+    .newsletter {
+      max-inline-size: 608px;
+      min-block-size: auto;
     }
   }
 
   @media (min-width: 64em){
-    .newsletter-information {
-      max-inline-size: 40ch;
+    .newsletter {
+      max-inline-size: 904px;
+      min-block-size: auto;
     }
   }
 }
