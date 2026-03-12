@@ -1,7 +1,7 @@
 @layer components;
 
 @import "@components/newsletter.css";
-@import "@components/form";
-@import "@components/button";
+@import "@components/form.css";
+@import "@components/button.css";
 @import "@components/success.css";
 @import "@components/attribution.css";

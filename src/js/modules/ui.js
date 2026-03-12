@@ -28,7 +28,7 @@ export function clearError(input, messageElement) {
 export function showSuccess(email) {
   formSection.classList.add("hidden");
   successSection.classList.remove("hidden");
-  successSection.setAttribute("aria-hidden", "false");
+  successSection.removeAttribute("aria-hidden");
   successSection.removeAttribute("tabindex");
 
   emailText.textContent = email;
@@ -56,9 +56,9 @@ function triggerShake(element) {
 }
 
 export function animateContainer() {
-  container.classList.remove("animate-in");
+  container.classList.remove("panel");
 
   void container.offsetWidth;
 
-  container.classList.add("animate-in");
+  container.classList.add("panel");
 }

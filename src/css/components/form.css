@@ -26,7 +26,7 @@
   /* Optional: ensure action buttons stay natural size */
   .information-fields .action-button {
     flex: 0 0 auto; /* keep button intrinsic width */
-    margin-left: 0.5rem;
+    margin-inline-start: 0.5rem;
   }
 
   .error-message {
@@ -107,7 +107,7 @@
   }
 
   /* Media query for stacked layout on small screens */
-  @media (max-width: 520px) {
+  @media (max-width: 33em) {
     .information-fields {
       flex-direction: column; /* stack items vertically for narrow viewports */
       align-items: stretch; /* make items fill container width */

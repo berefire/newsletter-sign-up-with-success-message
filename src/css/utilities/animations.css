@@ -1,18 +1,25 @@
 @layer utilities {
-
-    @keyframes fade-slide-in {
-        from {
-            opacity: 0;
-            transform: translateY(1rem);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+  @keyframes fade-slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
     }
 
-    .animate-in {
-        animation: fade-slide-in 0.45s ease;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
+
+  .panel {
+    animation: fade-slide-in 0.45s ease;
+  }
+
+  /* Respect user preference for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .panel {
+      animation: none; /* remove non-essential motion */
+      /* or: animation-duration: 0.001s; to preserve end state without visible motion */
+    }
+  }
 }

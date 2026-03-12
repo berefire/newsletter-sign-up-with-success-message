@@ -1,18 +1,38 @@
 @layer components {
-    .button {
-        inline-size: 100%;
-        padding-block: var(--space-block-button);
-        padding-inline: var(--space-inline-button);
-        border: none;
-        border-radius: var(--border-radius-button);
-        background: var(--bg-button);
-        color: var(--white);
-        font-weight: var(--fw-title);
-        line-height: var(--lh-title);
-        text-align: center;
-    }
+  .button {
+    inline-size: 100%;
+    padding-block: var(--space-block-button);
+    padding-inline: var(--space-inline-button);
+    border: none;
+    border-radius: var(--border-radius-button);
+    background: var(--bg-button);
+    color: var(--white);
+    font-weight: var(--fw-title);
+    line-height: var(--lh-title);
+    text-align: center;
+    /* keep native outline for browsers that don't support :focus-visible */
+    outline: none; /* we will add a visible replacement below */
+  }
 
-    .button:hover {
-        background: var(--bg-button-hover);
-    }
+  /* Visual focus for keyboard users (preferred) */
+  .button:focus-visible {
+    /* high-contrast, distinct ring for keyboard focus */
+    box-shadow:
+      0 0 0 4px rgba(0, 123, 255, 0.25),
+      0 0 0 1px rgba(0, 123, 255, 1);
+    /* keep shape consistent with border-radius */
+    border-radius: var(--border-radius-button);
+  }
+
+  /* Fallback for older browsers that only support :focus */
+  .button:focus {
+    /* subtle outline fallback so focus is always visible */
+    outline: 3px solid rgba(0, 123, 255, 0.9);
+    outline-offset: 2px;
+  }
+
+  /* keep hover styling for pointer users */
+  .button:hover {
+    background: var(--bg-button-hover);
+  }
 }
