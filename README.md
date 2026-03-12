@@ -93,7 +93,7 @@ Users should be able to:
 
 ### 🔗 Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/accessible-newsletter-sign-up-form-with-modular-js-and-cube-css-HArimKH9WH](https://www.frontendmentor.io/solutions/accessible-newsletter-sign-up-form-with-modular-js-and-cube-css-HArimKH9WH)
 - Live Site URL: [https://berefire.github.io/newsletter-sign-up-with-success-message/](https://berefire.github.io/newsletter-sign-up-with-success-message/)
 
 ---
