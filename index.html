@@ -52,7 +52,8 @@
               <label for="user-email" class="email-form">Email address</label>
               <span id="email-error" class="error-message" aria-live="polite"></span>
             </div>
-            <input class="input-email" id="user-email" type="email" name="email" placeholder="email@company.com" autocomplete="email" aria-describedby="email-error">
+            <input class="input-email" id="user-email" type="email" name="email" placeholder="email@company.com"
+              autocomplete="email" aria-describedby="email-error">
           </div>
 
 
@@ -64,7 +65,7 @@
     <!-- Sign-up form end -->
 
     <!-- Success message start -->
-    <section class="success-message box-sm stack-xl hidden" tabindex="-1">
+    <section class="success-message box-sm stack-xl hidden" aria-hidden="true" role="status" aria-live="polite" aria-atomic="true" tabindex="-1">
       <div class="success-content stack-sm">
         <div class="success-image">
           <img src="/assets/images/icon-success.svg" alt="Success icon">
@@ -88,10 +89,10 @@
 
 
 
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a class="link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a class="link" href="#">Berefire</a>.
-  </div>
+  </footer>
 
 
 </body>
