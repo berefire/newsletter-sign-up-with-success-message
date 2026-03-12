@@ -21,22 +21,29 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
+- [Overview](#-overview)
+  - [The challenge](#-the-challenge)
+  - [Screenshot](#-screenshot)
+  - [Links](#-links)
+- [My process](#️-my-process)
+  - [Built with](#-built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+  - [Continued development](#-continued-development)
+  - [Useful resources](#-useful-resources)
+  - [AI Collaboration](#-ai-collaboration)
+- [Author](#-author)
+- [Acknowledgments](#-acknowledgments)
 
-## Overview
+## 📋 Overview
 
-### The challenge
+This project is a solution to the Newsletter sign-up form with success message challenge from Frontend Mentor.
+The goal was to build an accessible and responsive newsletter subscription interface with form validation and a success confirmation state.
+
+The project focuses on clean architecture, accessibility best practices, and modular JavaScript while following a mobile-first responsive approach.
+
+---
+
+### 🎯 The challenge
 
 Users should be able to:
 
@@ -48,87 +55,159 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-### Screenshot
+---
 
-![](./screenshot.jpg)
+### 📸 Screenshot
 
-### Links
+#### Mobile (375x914)
+
+| _Default_ | _Active_ | _Error_ |
+| -------------------------- | ------------------------- | ------------------------ |
+| ![Mobile](./public/assets/screenshots/mobile.png) | ![Mobile Active](./public/assets/screenshots/mobile-active.png) | ![Mobile Error](/public/assets/screenshots/mobile-error.png) |
+
+| _Success Message_ | _Success Message Active_ |
+| ------------------ | ------------------------ |
+| ![Mobile Success Message](./public/assets/screenshots/mobile-sucess.png) | ![Mobile Success Message Active](./public/assets/screenshots/mobile-success-active.png) |
+
+#### Tablet (768x914)
+
+| _Default_ | _Active_ | _Error_ |
+| -------------------------- | ------------------------- | ------------------------ |
+| ![Tablet](./public/assets/screenshots/tablet.png) | ![Tablet Active](./public/assets/screenshots/tablet-active.png) | ![Tablet Error](/public/assets/screenshots/tablet-error.png) |
+
+| _Success Message_ | _Success Message Active_ |
+| ------------------ | ------------------------ |
+| ![Tablet Success Message](./public/assets/screenshots/tablet-success-message.png) | ![Tablet Success Message Active](./public/assets/screenshots/tablet-success-message-active.png) |
+
+#### Desktop (1024x914)
+
+| _Default_ | _Active_ | _Error_ |
+| -------------------------- | ------------------------- | ------------------------ |
+| ![Desktop](./public/assets/screenshots/desktop.png) | ![Desktop Active](./public/assets/screenshots/desktop-active.png) | ![Desktop Error](/public/assets/screenshots/Desktop-error.png) |
+
+| _Success Message_ | _Success Message Active_ |
+| ------------------ | ------------------------ |
+| ![Desktop Success Message](./public/assets/screenshots/desktop-success-message.png) | ![Desktop Success Message Active](./public/assets/screenshots/desktop-success-message-active.png) |
+
+---
+
+### 🔗 Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://berefire.github.io/newsletter-sign-up-with-success-message/](https://berefire.github.io/newsletter-sign-up-with-success-message/)
 
-## My process
+---
 
-### Built with
+## ⚙️ My Process
+
+### 🛠 Built With
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- CSS Grid
+- **CUBE CSS architecture**
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- **Vainilla JavaScript (ES Modules)**
+- **Vite** for development and build tooling
+- Accessible form validation
+- CSS animations and transitions
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+---
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+While working on this project I improved my understanding of several important frontend concepts:
 
-To see how you can add code snippets, see below:
+#### Modular JavaScript architecture
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+I separated responsibilities into different modules:
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+- validation logic
+- UI state handling
+- application initialization
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+This improved maintainability and code clarity.
 
-### Continued development
+#### Accessible form validation
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I implemented several accessibility improvements:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- `aria-invalid` for invalid inputs
+- `aria-live` for error announcements
+- keyboard focus management
+- semantic HTML labels and input associations
 
-### Useful resources
+#### Responsive layout design
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+Using a mobile-first approach allowed the layout to adapt naturally between mobile and desktop. The desktop layout centers the card while the mobile layout allows the form to occupy the full viewport.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+#### Animation with accessibility considerations
 
-### AI Collaboration
+UI animations were implemented while respecting users who prefer reduced motion using the **prefers-reduced-motion** media query.
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
+---
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
+### 🚀 Continued development
 
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+In future projects I would like to further improve:
 
-## Author
+- advanced form validation patterns
+- improved state management patterns in vanilla JavaScript
+- deeper accessibility testing with screen readers
+- performance optimization for interactive components
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+I also plan to continue refining my CSS architecture and component-based styling approaches.
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+---
 
-## Acknowledgments
+### 📖 Useful resources
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+- [MDN Web Docs](https://developer.mozilla.org/es/) - excellent reference for HTML, CSS, and JavaScript
+- [WebAIM](https://webaim.org/) - accessibility guidelines and contrast checking
+- [Frontend Mentor](https://www.frontendmentor.io) - real-world frontend challenges and design files
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+---
+
+### 🤖 AI Collaboration
+
+AI tools were used during this project as development assistants to support problem-solving and improve code quality.
+
+#### Tools used
+
+- **ChatGPT** – for explanations, debugging support, and reviewing accessibility improvements.
+
+#### How AI was used
+
+AI was primarily used to:
+
+- Review and improve accessibility practices (ARIA attributes, focus management, keyboard navigation).
+- Suggest improvements to CSS architecture and layout patterns.
+- Assist in writing and refining project documentation.
+- Brainstorm solutions for specific issues such as GitHub Pages deployment and responsive layout adjustments.
+
+#### What worked well
+
+AI was particularly useful for:
+
+- Identifying accessibility improvements that might otherwise be overlooked.
+- Suggesting cleaner architectural patterns for organizing JavaScript modules.
+- Speeding up documentation and explanations of best practices.
+
+#### What didn't work as expected
+
+Some suggestions required manual adjustments or verification, especially when related to project-specific implementation details.
+All AI-generated suggestions were reviewed and adapted to ensure the final code remained clear, maintainable, and fully understood.
+
+---
+
+## 👤 Author
+
+- Frontend Mentor - [@berefire](https://www.frontendmentor.io/profile/berefire)
+- GitHub - [@berefire](https://github.com/berefire)
+
+---
+
+## 🙏 Acknowledgments
+
+Thanks to Frontend Mentor for providing practical challenges that help developers improve real-world frontend skills.
+
+---
