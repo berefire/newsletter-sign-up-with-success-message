@@ -19,8 +19,8 @@
 
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  <script type="module" crossorigin src="/newsletter-sign-up-with-success-message/assets/index-DKF_f9ql.js"></script>
-  <link rel="stylesheet" crossorigin href="/newsletter-sign-up-with-success-message/assets/index-CP_BcQDF.css">
+  <script type="module" crossorigin src="/newsletter-sign-up-with-success-message/assets/index-asluM5EZ.js"></script>
+  <link rel="stylesheet" crossorigin href="/newsletter-sign-up-with-success-message/assets/index--uAMWPFN.css">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 
         <source media="(min-width: 48em)" srcset="/newsletter-sign-up-with-success-message/assets/images/illustration-sign-up-tablet.svg">
 
-        <img src="/newsletter-sign-up-with-success-message/assets/images/illustration-sign-up-mobile.svg" alt="Newsletter illustration">
+        <img src="/newsletter-sign-up-with-success-message/assets/images/illustration-sign-up-mobile.svg" alt="">
       </picture>
       <div class="newsletter-content box stack-lg">
         <div class="newsletter-information stack">
@@ -50,10 +50,10 @@
         <form id="signup-form" class="stack" novalidate>
           <div class="form-field">
             <div class="information-fields">
-              <label for="email" class="email-form">Email address</label>
-              <span class="error-message"></span>
+              <label for="user-email" class="email-form">Email address</label>
+              <span id="email-error" class="error-message" aria-live="polite"></span>
             </div>
-            <input class="input-email" id="user-email" type="email" placeholder="email@company.com">
+            <input class="input-email" id="user-email" type="email" name="email" placeholder="email@company.com" autocomplete="email" aria-describedby="email-error">
           </div>
 
 
@@ -65,10 +65,10 @@
     <!-- Sign-up form end -->
 
     <!-- Success message start -->
-    <section class="success-message box-sm stack-xl hidden">
+    <section class="success-message box-sm stack-xl hidden" tabindex="-1">
       <div class="success-content stack-sm">
         <div class="success-image">
-          <img src="/newsletter-sign-up-with-success-message/assets/images/icon-success.svg" alt="">
+          <img src="/newsletter-sign-up-with-success-message/assets/images/icon-success.svg" alt="Success icon">
         </div>
         <h2 class="success-title">
           Thanks for subscribing!
