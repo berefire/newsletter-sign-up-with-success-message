@@ -8,6 +8,8 @@ const container = document.querySelector(".cover");
 /* error handling */
 
 export function showError(input, messageElement, message = "Please enter a valid email address" ) {
+  if (!input) return;
+  if (!messageElement) return;
   input.classList.add("error", "invalid-input");
   input.setAttribute("aria-invalid", "true");
 

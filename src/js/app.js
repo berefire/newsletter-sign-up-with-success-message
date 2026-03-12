@@ -43,6 +43,7 @@ export function initApp() {
       showSuccess(userEmail);
     });
 
+
     /* remove error while typing */
 
     input.addEventListener("input", () => {
@@ -52,7 +53,7 @@ export function initApp() {
     });
 
     /* dismiss success message */
-
+    if (dismissBtn) {
     dismissBtn.addEventListener("click", () => {
       input.value = "";
 
@@ -62,6 +63,7 @@ export function initApp() {
 
       input.focus();
     });
+  }
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
