@@ -10,17 +10,23 @@
   .information-fields {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap; /* allow children to wrap to new rows */
+    gap: 0.75rem;
     align-items: center;
     position: relative;
     width: 100%;
   }
 
-  #user-email {
-    inline-size: 100%;
-    padding-block: var(--space-block-input);
-    padding-inline: var(--space-inline-input);
-    border-radius: var(--border-radius-button);
+  /* Make inputs/buttons flexible but with sensible limits */
+  .information-fields > * {
+    flex: 1 1 220px; /* grow, shrink, but prefer at least 220px */
+    min-width: 0; /* prevents overflow from long content */
+  }
+
+  /* Optional: ensure action buttons stay natural size */
+  .information-fields .action-button {
+    flex: 0 0 auto; /* keep button intrinsic width */
+    margin-left: 0.5rem;
   }
 
   .error-message {
@@ -34,6 +40,10 @@
 
   .input-email {
     border: 0.0625em solid var(--bg-email-input-border);
+    inline-size: 100%;
+    padding-block: var(--space-block-input);
+    padding-inline: var(--space-inline-input);
+    border-radius: var(--border-radius-button);
   }
 
   .input-email:focus-visible {
@@ -83,7 +93,28 @@
     }
   }
 
-  .input-shake {
+  .input--error {
     animation: input-shake 0.35s ease;
+  }
+
+  /* If the user prefers reduced motion, remove/replace animations */
+  @media (prefers-reduced-motion: reduce) {
+    .input--error {
+      /* No animation — use a simple visual alternative */
+      animation: none; /* explicitly disable animation */
+      outline: 2px solid #c0392b; /* subtle, static emphasis instead */
+    }
+  }
+
+  /* Media query for stacked layout on small screens */
+  @media (max-width: 520px) {
+    .information-fields {
+      flex-direction: column; /* stack items vertically for narrow viewports */
+      align-items: stretch; /* make items fill container width */
+    }
+
+    .information-fields > * {
+      flex: 1 1 auto; /* allow full-width form controls */
+    }
   }
 }

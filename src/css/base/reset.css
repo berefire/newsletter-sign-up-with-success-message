@@ -1,4 +1,4 @@
-  /* A modified version of my "modern reset" https://github.com/Andy-set-studio/modern-css-reset */
+/* A modified version of my "modern reset" https://github.com/Andy-set-studio/modern-css-reset */
 
 @layer base {
   /* Box sizing rules */
@@ -46,6 +46,8 @@
   ul,
   ol {
     list-style: none;
+    margin: 0; /* remove browser default margins */
+    padding: 0; /* remove browser default padding */
   }
 
   /* Make images easier to work with */

@@ -18,7 +18,7 @@ export function showError(input, messageElement, message = "Please enter a valid
 }
 
 export function clearError(input, messageElement) {
-  input.classList.remove("error", "invalid-input", "input-shake");
+  input.classList.remove("error", "invalid-input", "input--error");
 
   messageElement.textContent = "";
 }
@@ -48,11 +48,11 @@ export function showForm() {
 /* animations */
 
 function triggerShake(element) {
-  element.classList.remove("input-shake");
+  element.classList.remove("input--error");
 
   void element.offsetWidth;
 
-  element.classList.add("input-shake");
+  element.classList.add("input--error");
 }
 
 export function animateContainer() {
