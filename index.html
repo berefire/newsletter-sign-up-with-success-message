@@ -19,7 +19,7 @@
 
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  <script type="module" crossorigin src="/newsletter-sign-up-with-success-message/assets/index-BPerdiqD.js"></script>
+  <script type="module" crossorigin src="/newsletter-sign-up-with-success-message/assets/index-eiQ3VEmB.js"></script>
   <link rel="stylesheet" crossorigin href="/newsletter-sign-up-with-success-message/assets/index-CiV_YMDG.css">
 </head>
 
@@ -27,7 +27,7 @@
   <main class="cover">
     <!-- Sign-up form start -->
     <section class="newsletter cluster box-lg">
-      <picture class="newsletter-image">
+      <picture class="newsletter-image" aria-hidden="true" role="presentation">
 
         <source media="(min-width: 64em)" srcset="/newsletter-sign-up-with-success-message/assets/images/illustration-sign-up-desktop.svg">
 
@@ -53,7 +53,8 @@
               <label for="user-email" class="email-form">Email address</label>
               <span id="email-error" class="error-message" aria-live="polite"></span>
             </div>
-            <input class="input-email" id="user-email" type="email" name="email" placeholder="email@company.com" autocomplete="email" aria-describedby="email-error">
+            <input class="input-email" id="user-email" type="email" name="email" placeholder="email@company.com"
+              autocomplete="email" aria-describedby="email-error">
           </div>
 
 
@@ -65,7 +66,7 @@
     <!-- Sign-up form end -->
 
     <!-- Success message start -->
-    <section class="success-message box-sm stack-xl hidden" tabindex="-1">
+    <section class="success-message box-sm stack-xl hidden" aria-hidden="true" role="status" aria-live="polite" aria-atomic="true" tabindex="-1">
       <div class="success-content stack-sm">
         <div class="success-image">
           <img src="/newsletter-sign-up-with-success-message/assets/images/icon-success.svg" alt="Success icon">
@@ -80,7 +81,7 @@
       </div>
 
 
-      <button class="button dismiss-btn">
+      <button type="button" class="button dismiss-btn">
         Dismiss message</button>
 
     </section>
@@ -89,10 +90,10 @@
 
 
 
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a class="link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a class="link" href="#">Berefire</a>.
-  </div>
+  </footer>
 
 
 </body>
