@@ -7,10 +7,12 @@ const container = document.querySelector(".cover");
 
 /* error handling */
 
-export function showError(input, messageElement) {
+export function showError(input, messageElement, message = "Please enter a valid email address" ) {
   input.classList.add("error", "invalid-input");
+  input.setAttribute("aria-invalid", "true");
 
-  messageElement.textContent = "Valid email address";
+  messageElement.textContent = message;
+  messageElement.setAttribute("role", "alert");
 
   triggerShake(input);
 }
@@ -39,7 +41,7 @@ export function showSuccess(email) {
 export function showForm() {
   successSection.classList.add("hidden");
   successSection.setAttribute("aria-hidden", "true");
-  successSection.setAttribute("tabindex");
+  successSection.setAttribute("tabindex", "-1");
   formSection.classList.remove("hidden");
 }
 
