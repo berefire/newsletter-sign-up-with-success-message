@@ -1,7 +1,7 @@
 @layer tokens {
   :root {
     --padding-inline-newsletter-content: var(--spacing-300);
-    --padding-block-newsletter-content: var(--spacing-500);
+    --padding-block-newsletter-content: var(--spacing-200);
     --padding-inline-newsletter: 0;
     --padding-block-newsletter: 0;
     --padding-inline-success: var(--spacing-300);

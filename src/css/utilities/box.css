@@ -1,6 +1,7 @@
 @layer utilities {
     .box {
         padding-inline: var(--padding-inline-newsletter-content);
+        padding-block: 0 var(--padding-block-newsletter-content);
         border-radius: 0;
     }
 
