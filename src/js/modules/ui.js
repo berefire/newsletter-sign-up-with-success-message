@@ -1,49 +1,70 @@
-export function showError(input, messageElement){
-    input.classList.add("error");
-    input.classList.add("invalid-input")
-    messageElement.textContent = "Valid email required";
+/* cache DOM elements */
 
-    input.classList.remove("input-shake");
-    void input.offsetWidth;
-    input.classList.add("input-shake");
+const formSection = document.querySelector(".newsletter");
+const successSection = document.querySelector(".success-message");
+const emailText = document.querySelector(".success-email");
+const container = document.querySelector(".cover");
+
+/* error handling */
+
+export function showError(input, messageElement) {
+
+  input.classList.add("error", "invalid-input");
+
+  messageElement.textContent = "Valid email address";
+
+  triggerShake(input);
+
 }
 
-export function clearError(input, messageElement){
-      input.classList.remove("error");
-      input.classList.remove("invalid-input");
-      input.classList.remove("input-shake");
-      messageElement.textContent = "";
+export function clearError(input, messageElement) {
+
+  input.classList.remove("error", "invalid-input", "input-shake");
+
+  messageElement.textContent = "";
+
 }
+
+/* UI states */
 
 export function showSuccess(email) {
-    const formSection = document.querySelector(".newsletter");
-    const successSection = document.querySelector(".success-message");
-    const emailText = document.querySelector(".success-email");
 
-    formSection.classList.add("hidden");
-    successSection.classList.remove("hidden");
+  formSection.classList.add("hidden");
+  successSection.classList.remove("hidden");
 
-    animateContainer();
+  emailText.textContent = email;
 
-    emailText.textContent = email;
+  animateContainer();
+
+  successSection.focus();
+
 }
 
-export function ShowForm(){
+export function showForm() {
 
-    const formSection = document.querySelector(".newsletter");
-    const successSection = document.querySelector(".success-message");
+  successSection.classList.add("hidden");
+  formSection.classList.remove("hidden");
 
-    successSection.classList.add("hidden");
-    formSection.classList.remove("hidden");
 }
 
-export function animateContainer(){
+/* animations */
 
-    const container = document.querySelector(".cover")
+function triggerShake(element) {
 
-    container.classList.remove("animate-in");
+  element.classList.remove("input-shake");
 
-    void container.offsetWidth;
+  void element.offsetWidth;
 
-    container.classList.add("animate-in");
+  element.classList.add("input-shake");
+
+}
+
+export function animateContainer() {
+
+  container.classList.remove("animate-in");
+
+  void container.offsetWidth;
+
+  container.classList.add("animate-in");
+
 }

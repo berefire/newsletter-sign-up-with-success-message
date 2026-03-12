@@ -7,6 +7,7 @@
         --bg-border: var(--grey);
         --bg-error-border: var(--red);
         --bg-button: var(--blue-800);
+        --bg-focus-email-input: var(--blue-800);
         --bg-email-input-border: var(--grey);
         --bg-button-hover: linear-gradient(to right, var(--gradient-4), var(--red));
     }

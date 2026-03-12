@@ -36,10 +36,26 @@
     border: 0.0625em solid var(--bg-email-input-border);
   }
 
+  .input-email:focus-visible {
+    outline: 0.125em solid var(--bg-focus-email-input);
+  }
+
   .invalid-input {
-    border: 0.0625em solid var(--bg-error-border);
+    border: 0.125em solid var(--bg-error-border);
     background-color: #ffe7e6;
     color: var(--fc-error-text);
+  }
+
+  .invalid-input:focus-visible {
+    outline: 0.125em solid var(--bg-error-border);
+    border-color: var(--bg-error-border);
+  }
+
+  .input-email:-webkit-autofill,
+  .input-email:-webkit-autofill:hover,
+  .input-email:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 62.5rem white inset;
+    -webkit-text-fill-color: var(--fc-text);
   }
 
   /* -------------------------------- */

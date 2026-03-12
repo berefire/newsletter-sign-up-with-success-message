@@ -32,7 +32,7 @@
 
         <source media="(min-width: 48em)" srcset="/assets/images/illustration-sign-up-tablet.svg">
 
-        <img src="/assets/images/illustration-sign-up-mobile.svg" alt="Newsletter illustration">
+        <img src="/assets/images/illustration-sign-up-mobile.svg" alt="">
       </picture>
       <div class="newsletter-content box stack-lg">
         <div class="newsletter-information stack">
@@ -49,10 +49,10 @@
         <form id="signup-form" class="stack" novalidate>
           <div class="form-field">
             <div class="information-fields">
-              <label for="email" class="email-form">Email address</label>
-              <span class="error-message"></span>
+              <label for="user-email" class="email-form">Email address</label>
+              <span id="email-error" class="error-message" aria-live="polite"></span>
             </div>
-            <input class="input-email" id="user-email" type="email" placeholder="email@company.com">
+            <input class="input-email" id="user-email" type="email" name="email" placeholder="email@company.com" autocomplete="email" aria-describedby="email-error">
           </div>
 
 
@@ -64,10 +64,10 @@
     <!-- Sign-up form end -->
 
     <!-- Success message start -->
-    <section class="success-message box-sm stack-xl hidden">
+    <section class="success-message box-sm stack-xl hidden" tabindex="-1">
       <div class="success-content stack-sm">
         <div class="success-image">
-          <img src="/assets/images/icon-success.svg" alt="">
+          <img src="/assets/images/icon-success.svg" alt="Success icon">
         </div>
         <h2 class="success-title">
           Thanks for subscribing!
