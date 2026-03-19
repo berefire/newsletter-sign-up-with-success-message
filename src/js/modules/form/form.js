@@ -46,7 +46,6 @@ export function createForm() {
     }
 
     clearError(refs.inputEmail, refs.errorMessage);
-    console.log(refs.successTitle)
     showSuccessUI({
       formSection: refs.formSection,
       email: refs.inputEmail.value,
@@ -57,7 +56,7 @@ export function createForm() {
     });
 
     animateContainer(refs.container);
-    focusElement(refs.successSection);
+    focusElement(refs.successTitle);
   }
 
   function handleInput() {
