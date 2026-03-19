@@ -1,5 +1,5 @@
 @layer utilities {
-  @keyframes fade-slide-in {
+  @keyframes enter-up {
     from {
       opacity: 0;
       transform: translateY(1rem);
@@ -11,13 +11,13 @@
     }
   }
 
-  .panel {
-    animation: fade-slide-in 0.45s ease;
+  .animate-enter-up {
+    animation: enter-up 0.45s ease;
   }
 
   /* Respect user preference for reduced motion */
   @media (prefers-reduced-motion: reduce) {
-    .panel {
+    .animate-enter-up {
       animation: none; /* remove non-essential motion */
       /* or: animation-duration: 0.001s; to preserve end state without visible motion */
     }

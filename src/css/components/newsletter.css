@@ -2,7 +2,14 @@
   .newsletter {
     background-color: var(--bg-newsletter);
     max-inline-size: 100%;
-    min-block-size: 100vh;
+  }
+
+  .newsletter-content {
+    flex: 1;
+  }
+
+  .newsletter-image {
+    flex: 1;
   }
 
   .newsletter-image picture, .newsletter-image img {
@@ -14,7 +21,6 @@
     font-size: var(--fs-text-title);
     font-weight: var(--fw-title);
     line-height: var(--lh-title);
-    white-space: nowrap;
   }
 
   .newsletter-information {
@@ -45,6 +51,7 @@
       max-inline-size: calc( 608 / var(--base) * 1rem);
       min-block-size: auto;
     }
+
   }
 
   @media (min-width: 64em){

@@ -4,7 +4,6 @@
         flex-direction: column;
         background-color: var(--bg-newsletter);
         max-inline-size: 100%;
-        min-block-size: 100vh;
     }
 
     .success-title {

@@ -26,7 +26,7 @@
   <main class="cover">
     <!-- Sign-up form start -->
     <section class="newsletter cluster box-lg">
-      <picture class="newsletter-image" aria-hidden="true" role="presentation">
+      <picture class="newsletter-image" aria-hidden="true">
 
         <source media="(min-width: 64em)" srcset="/assets/images/illustration-sign-up-desktop.svg">
 
@@ -65,8 +65,7 @@
     <!-- Sign-up form end -->
 
     <!-- Success message start -->
-    <section class="success-message box-sm stack-xl hidden" id="successMessage" aria-hidden="true" role="status"
-      aria-live="polite" aria-atomic="true" tabindex="-1">
+    <section class="success-message box-sm stack-xl hidden" id="success-section" aria-hidden="true" tabindex="-1">
       <div class="success-content stack-sm">
         <div class="success-image">
           <img src="/assets/images/icon-success.svg" alt="Success icon">
@@ -75,7 +74,7 @@
           Thanks for subscribing!
         </h2>
         <p class="success-description">
-          A confirmation email has been sent to <span class="success-email"></span>.
+          A confirmation email has been sent to <span id="success-email" class="success-email"></span>.
           Please open it and click the button inside to confirm your subscription.
         </p>
       </div>

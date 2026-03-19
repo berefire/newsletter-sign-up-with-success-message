@@ -1,4 +1,5 @@
 import "@css/main.css";
-import { initApp } from "./js/app";
+import { createForm } from "./js/modules/form/form";
 
-initApp();
+const form = createForm();
+form.init();

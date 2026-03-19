@@ -27,7 +27,7 @@
     margin-inline-start: 0.5rem;
   }
 
-  .error-message {
+  .label-is-error {
     color: var(--fc-error-text);
     font-size: var(--fs-email-label);
     line-height: var(--lh-body);
@@ -57,12 +57,22 @@
     border-color: var(--bg-error-border);
   }
 
+    /* Normal state of autofilled input */
   .input-email:-webkit-autofill,
   .input-email:-webkit-autofill:hover,
   .input-email:-webkit-autofill:focus {
     -webkit-box-shadow: 0 0 0 62.5rem white inset;
     -webkit-text-fill-color: var(--fc-text);
   }
+
+  /* Error state of autofilled input */
+  .input-email.invalid-input:-webkit-autofill,
+  .input-email.invalid-input:-webkit-autofill:hover,
+  .input-email.invalid-input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 62.5rem #ffe7e6 inset;
+    -webkit-text-fill-color: var(--fc-error-text);
+  }
+
 
   /* -------------------------------- */
   /* form animations */
@@ -104,11 +114,6 @@
 
   /* Media query for stacked layout on small screens */
   @media (max-width: 33em) {
-    .information-fields {
-      flex-direction: column; /* stack items vertically for narrow viewports */
-      align-items: stretch; /* make items fill container width */
-    }
-
     .information-fields > * {
       flex: 1 1 auto; /* allow full-width form controls */
     }
