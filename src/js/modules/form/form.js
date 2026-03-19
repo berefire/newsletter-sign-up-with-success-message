@@ -28,11 +28,10 @@ export function createForm() {
   /* ========= VALIDACIÓN DE REFS ========= */
 
   function hasRequiredRefs() {
-    return Boolean(refs.form && refs.inputEmail && refs.errorMessage && refs.dismissBtn && refs.container && refs.formSection && refs.successSection && refs.successEmail && refs.successTitle && refs.successDescription);
+    return Boolean(refs.form && refs.inputEmail && refs.errorMessage && refs.dismissBtn && refs.container && refs.formSection && refs.successSection);
   }
 
   /* ============= HANDLERS ============= */
-
   function handleSubmit(event) {
     event.preventDefault();
 

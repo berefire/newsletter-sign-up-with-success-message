@@ -64,7 +64,11 @@ export function showSuccessUI({
     console.warn("Success description element not found:", successDescription);
   }
 
-  successEmail.textContent = email;
+  if (successEmail) {
+    successEmail.textContent = email;
+  } else {
+    console.warn("Success email element not found:", successEmail);
+  }
 }
 
 export function showFormUI({
