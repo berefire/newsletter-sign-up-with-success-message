@@ -4,17 +4,15 @@
     font-size: var(--fs-email-label);
     line-height: var(--lh-body);
     font-weight: var(--fw-title);
-    margin-block-end: var(--email-padding-block-end);
   }
 
   .information-fields {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; /* allow children to wrap to new rows */
-    gap: 0.75rem;
+    display: grid;
+    grid-template-columns: 1fr auto; /* input takes available space, button takes natural size */
     align-items: center;
     position: relative;
     width: 100%;
+    padding-block-end: var(--email-padding-block-end);
   }
 
   /* Make inputs/buttons flexible but with sensible limits */
@@ -30,12 +28,10 @@
   }
 
   .error-message {
-    display: block;
     color: var(--fc-error-text);
     font-size: var(--fs-email-label);
     line-height: var(--lh-body);
     font-weight: var(--fw-title);
-    margin-block-end: var(--email-padding-block-end);
   }
 
   .input-email {
