@@ -19,15 +19,15 @@
 
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  <script type="module" crossorigin src="/newsletter-sign-up-with-success-message/assets/index-Dah_QdMh.js"></script>
-  <link rel="stylesheet" crossorigin href="/newsletter-sign-up-with-success-message/assets/index-BLD418Nx.css">
+  <script type="module" crossorigin src="/newsletter-sign-up-with-success-message/assets/index-DWfCf5cI.js"></script>
+  <link rel="stylesheet" crossorigin href="/newsletter-sign-up-with-success-message/assets/index-DgfG_Z8r.css">
 </head>
 
 <body>
   <main class="cover">
     <!-- Sign-up form start -->
     <section class="newsletter cluster box-lg">
-      <picture class="newsletter-image" aria-hidden="true" role="presentation">
+      <picture class="newsletter-image" aria-hidden="true">
 
         <source media="(min-width: 64em)" srcset="/newsletter-sign-up-with-success-message/assets/images/illustration-sign-up-desktop.svg">
 
@@ -66,8 +66,7 @@
     <!-- Sign-up form end -->
 
     <!-- Success message start -->
-    <section class="success-message box-sm stack-xl hidden" id="successMessage" aria-hidden="true" role="status"
-      aria-live="polite" aria-atomic="true" tabindex="-1">
+    <section class="success-message box-sm stack-xl hidden" id="success-section" aria-hidden="true" tabindex="-1">
       <div class="success-content stack-sm">
         <div class="success-image">
           <img src="/newsletter-sign-up-with-success-message/assets/images/icon-success.svg" alt="Success icon">
@@ -76,7 +75,7 @@
           Thanks for subscribing!
         </h2>
         <p class="success-description">
-          A confirmation email has been sent to <span class="success-email"></span>.
+          A confirmation email has been sent to <span id="success-email" class="success-email"></span>.
           Please open it and click the button inside to confirm your subscription.
         </p>
       </div>
