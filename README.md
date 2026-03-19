@@ -83,7 +83,7 @@ Users should be able to:
 
 | _Default_ | _Active_ | _Error_ |
 | -------------------------- | ------------------------- | ------------------------ |
-| ![Desktop](./public/assets/screenshots/desktop.png) | ![Desktop Active](./public/assets/screenshots/desktop-active.png) | ![Desktop Error](/public/assets/screenshots/Desktop-error.png) |
+| ![Desktop](./public/assets/screenshots/desktop.png) | ![Desktop Active](./public/assets/screenshots/desktop-active.png) | ![Desktop Error](/public/assets/screenshots/desktop-error.png) |
 
 | _Success Message_ | _Success Message Active_ |
 | ------------------ | ------------------------ |
