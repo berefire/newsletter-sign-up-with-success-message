@@ -17,13 +17,11 @@
 
   /* Make inputs/buttons flexible but with sensible limits */
   .information-fields > * {
-    flex: 1 1 220px; /* grow, shrink, but prefer at least 220px */
     min-width: 0; /* prevents overflow from long content */
   }
 
   /* Optional: ensure action buttons stay natural size */
   .information-fields .action-button {
-    flex: 0 0 auto; /* keep button intrinsic width */
     margin-inline-start: 0.5rem;
   }
 
@@ -109,13 +107,6 @@
       /* No animation — use a simple visual alternative */
       animation: none; /* explicitly disable animation */
       outline: 2px solid #c0392b; /* subtle, static emphasis instead */
-    }
-  }
-
-  /* Media query for stacked layout on small screens */
-  @media (max-width: 33em) {
-    .information-fields > * {
-      flex: 1 1 auto; /* allow full-width form controls */
     }
   }
 }

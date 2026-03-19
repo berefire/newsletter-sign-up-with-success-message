@@ -11,6 +11,10 @@
         margin-block-start: var(--stack-newsletter-list);
     }
 
+    .stack-md > * + * {
+        margin-block-start: var(--stack-newsletter-form-fields);
+    }
+
     .stack-sm > * + * {
         margin-block-start: var(--stack-success-content);
     }

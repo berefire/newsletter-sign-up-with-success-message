@@ -19,9 +19,17 @@ export function createForm() {
     formSection: document.querySelector(".newsletter"),
     successSection: document.getElementById("success-section"),
     successEmail: document.getElementById("success-email"),
+    successTitle: document.querySelector(".success-title"),
+    successDescription: document.querySelector(".success-description"),
   };
 
   let isInitialized = false;
+
+  /* ========= VALIDACIÓN DE REFS ========= */
+
+  function hasRequiredRefs() {
+    return Boolean(refs.form && refs.inputEmail && refs.errorMessage && refs.dismissBtn && refs.container && refs.formSection && refs.successSection && refs.successEmail && refs.successTitle && refs.successDescription);
+  }
 
   /* ============= HANDLERS ============= */
 
@@ -38,11 +46,14 @@ export function createForm() {
     }
 
     clearError(refs.inputEmail, refs.errorMessage);
+    console.log(refs.successTitle)
     showSuccessUI({
+      formSection: refs.formSection,
       email: refs.inputEmail.value,
       successEmail: refs.successEmail,
-      formSection: refs.formSection,
       successSection: refs.successSection,
+      successTitle: refs.successTitle,
+      successDescription: refs.successDescription,
     });
 
     animateContainer(refs.container);
@@ -57,6 +68,8 @@ export function createForm() {
     showFormUI({
       formSection: refs.formSection,
       successSection: refs.successSection,
+      successTitle: refs.successTitle,
+      successDescription: refs.successDescription,
     });
 
     animateContainer(refs.container);
@@ -95,8 +108,8 @@ export function createForm() {
   function init() {
     if (isInitialized) return;
 
-    if (!refs.form || !refs.inputEmail) {
-      console.warn("Sign-up form or input missing — skipping form behavior.");
+    if (!hasRequiredRefs()) {
+      console.error("Form initialization failed: Missing required DOM elements.");
       return;
     }
 

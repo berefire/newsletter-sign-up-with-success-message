@@ -1,11 +1,15 @@
 export function triggerShake(element) {
+    if (!element) return;
+
     element.classList.remove("input--error");
     void element.offsetWidth; // trigger reflow to restart animation
     element.classList.add("input--error");
 }
 
-export function animateContainer(container) {
-    container.classList.remove("animate-enter-up");
-    void container.offsetWidth; // trigger reflow to restart animation
-    container.classList.add("animate-enter-up");
+export function animateContainer(element) {
+    if (!element) return;
+
+    element.classList.remove("animate-enter-up");
+    void element.offsetWidth; // trigger reflow to restart animation
+    element.classList.add("animate-enter-up");
 }

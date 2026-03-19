@@ -13,6 +13,7 @@
     --stack-newsletter-content: var(--spacing-300);
     --stack-newsletter-information: var(--spacing-500);
     --stack-newsletter-list: var(--spacing-100);
+    --stack-newsletter-form-fields: var(--spacing-300);
     --stack-success-content: var(--spacing-400);
     --stack-success-button: calc(263 / var(--base) * 1rem);
 
@@ -31,6 +32,7 @@
       --padding-block-newsletter: var(--spacing-500);
       --stack-success-button: var(--spacing-400);
       --stack-newsletter-information:var(--spacing-300);
+      --stack-newsletter-form-fields: var(--spacing-200);
     }
   }
 
@@ -41,6 +43,7 @@
       --gap-newsletter: var(--spacing-800);
       --stack-newsletter-content: var(--spacing-400);
       --stack-newsletter-information:var(--spacing-400);
+      --stack-newsletter-form-fields: var(--spacing-300);
     }
   }
 }

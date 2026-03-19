@@ -1,7 +1,7 @@
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function validateEmail(email) {
-    const value = email.trim();
+    const value = email?.trim() ?? "";
 
     if(!value) {
         return {
