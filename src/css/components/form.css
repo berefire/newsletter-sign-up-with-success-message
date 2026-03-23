@@ -25,7 +25,7 @@
     margin-inline-start: 0.5rem;
   }
 
-  .label-is-error {
+  .label--error {
     color: var(--fc-error-text);
     font-size: var(--fs-email-label);
     line-height: var(--lh-body);
@@ -44,13 +44,13 @@
     outline: 0.125em solid var(--bg-focus-email-input);
   }
 
-  .invalid-input {
+  .input--error {
     border: 0.125em solid var(--bg-error-border);
     background-color: #ffe7e6;
     color: var(--fc-error-text);
   }
 
-  .invalid-input:focus-visible {
+  .input--error:focus-visible {
     outline: 0.125em solid var(--bg-error-border);
     border-color: var(--bg-error-border);
   }
@@ -64,9 +64,9 @@
   }
 
   /* Error state of autofilled input */
-  .input-email.invalid-input:-webkit-autofill,
-  .input-email.invalid-input:-webkit-autofill:hover,
-  .input-email.invalid-input:-webkit-autofill:focus {
+  .input-email.input--error:-webkit-autofill,
+  .input-email.input--error:-webkit-autofill:hover,
+  .input-email.input--error:-webkit-autofill:focus {
     -webkit-box-shadow: 0 0 0 62.5rem #ffe7e6 inset;
     -webkit-text-fill-color: var(--fc-error-text);
   }

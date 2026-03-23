@@ -3,12 +3,12 @@
 export function showError(input, messageElement, message){
   if (!input) return;
 
-  input.classList.add("invalid-input");
+  input.classList.add("input--error");
   input.setAttribute("aria-invalid", "true");
   
   if (messageElement) {
     messageElement.textContent = message;
-    messageElement.classList.add("label-is-error");
+    messageElement.classList.add("label--error");
     messageElement.setAttribute("role", "alert");
   } else {
     console.warn("Error message element not found for displaying error:", messageElement);
@@ -18,12 +18,12 @@ export function showError(input, messageElement, message){
 export function clearError(input, messageElement){
   if (!input) return;
 
-  input.classList.remove("invalid-input", "input--error");
+  input.classList.remove("input--error");
   input.removeAttribute("aria-invalid");  
 
   if (messageElement) {
     messageElement.textContent = "";
-    messageElement.classList.remove("label-is-error");
+    messageElement.classList.remove("label--error");
     messageElement.removeAttribute("role");
   } else {
     console.warn("Error message element not found for clearing error:", messageElement);

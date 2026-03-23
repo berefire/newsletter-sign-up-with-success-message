@@ -27,8 +27,8 @@ export function createForm() {
 
   /* ========= VALIDACIÓN DE REFS ========= */
 
-  function hasRequiredRefs() {
-    return Boolean(refs.form && refs.inputEmail && refs.errorMessage && refs.dismissBtn && refs.container && refs.formSection && refs.successSection);
+  function hasRequiredRefs(list = []) {
+    return list.every(ref => Boolean(refs[ref]));
   }
 
   /* ============= HANDLERS ============= */
@@ -106,7 +106,17 @@ export function createForm() {
   function init() {
     if (isInitialized) return;
 
-    if (!hasRequiredRefs()) {
+    if (!hasRequiredRefs([
+      "form", 
+      "inputEmail", 
+      "errorMessage", 
+      "dismissBtn", 
+      "container", 
+      "formSection", 
+      "successSection", 
+      "successEmail", 
+      "successTitle", 
+      "successDescription"])) {
       console.error("Form initialization failed: Missing required DOM elements.");
       return;
     }
