@@ -48,6 +48,7 @@
     border: 0.125em solid var(--bg-error-border);
     background-color: #ffe7e6;
     color: var(--fc-error-text);
+    animation: input-shake 0.35s ease;
   }
 
   .input--error:focus-visible {
@@ -64,9 +65,9 @@
   }
 
   /* Error state of autofilled input */
-  .input-email.input--error:-webkit-autofill,
-  .input-email.input--error:-webkit-autofill:hover,
-  .input-email.input--error:-webkit-autofill:focus {
+  :where(.input--error):-webkit-autofill,
+  :where(.input--error):-webkit-autofill:hover,
+  :where(.input--error):-webkit-autofill:focus {
     -webkit-box-shadow: 0 0 0 62.5rem #ffe7e6 inset;
     -webkit-text-fill-color: var(--fc-error-text);
   }
@@ -96,11 +97,7 @@
       transform: translateX(0);
     }
   }
-
-  .input--error {
-    animation: input-shake 0.35s ease;
-  }
-
+  
   /* If the user prefers reduced motion, remove/replace animations */
   @media (prefers-reduced-motion: reduce) {
     .input--error {
